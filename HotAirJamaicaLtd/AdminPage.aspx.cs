@@ -33,5 +33,16 @@ namespace HotAirJamaicaLtd
         {
             Response.Redirect("AddTechnician.aspx");
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AddInstallation.aspx");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AddWorkDone");
+
+        }
     }
 }

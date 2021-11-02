@@ -107,9 +107,11 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AddComercial.aspx" />
+    <Content Include="AddInstallation.aspx" />
     <Content Include="AddPackage.aspx" />
     <Content Include="AddResidential.aspx" />
     <Content Include="AddTechnician.aspx" />
+    <Content Include="AddWorkDone.aspx" />
     <Content Include="AdminPage.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -178,6 +180,13 @@
     <Compile Include="AddComercial.aspx.designer.cs">
       <DependentUpon>AddComercial.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AddInstallation.aspx.cs">
+      <DependentUpon>AddInstallation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddInstallation.aspx.designer.cs">
+      <DependentUpon>AddInstallation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddPackage.aspx.cs">
       <DependentUpon>AddPackage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -198,6 +207,13 @@
     </Compile>
     <Compile Include="AddTechnician.aspx.designer.cs">
       <DependentUpon>AddTechnician.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddWorkDone.aspx.cs">
+      <DependentUpon>AddWorkDone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddWorkDone.aspx.designer.cs">
+      <DependentUpon>AddWorkDone.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPage.aspx.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>
