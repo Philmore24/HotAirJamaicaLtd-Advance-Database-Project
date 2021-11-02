@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <link href="CSS/Products.css" rel="stylesheet" />
-
+    <h1 align="center">Packages Offered</h1>
     <div class="row" style="padding-top: 50px">
         <asp:Repeater ID="Repeater1" runat="server">
             <ItemTemplate>
