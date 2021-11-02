@@ -6,35 +6,43 @@
         <br />
         TRN :
         <asp:TextBox ID="trn" runat="server"></asp:TextBox>
-        &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="trn" ErrorMessage="TRN is required" ForeColor="Red"></asp:RequiredFieldValidator>
+        &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="trn" ErrorMessage="TRN is required" ForeColor="Red">*</asp:RequiredFieldValidator>
         <br />
         <br />
 
         Address :
-        <asp:TextBox ID="address" runat="server"></asp:TextBox>&nbsp;<br />
+        <asp:TextBox ID="address" runat="server"></asp:TextBox>&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="address" ErrorMessage="Address is required" ForeColor="Red">*</asp:RequiredFieldValidator>
+        <br />
         <br />
 
         Company Name :
         <asp:TextBox ID="company" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="company" ErrorMessage="Company name is required" ForeColor="Red">*</asp:RequiredFieldValidator>
         <br />
         <br />
 
         Mac Address :
         <asp:TextBox ID="mac" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="mac" ErrorMessage="MAC Address is required" ForeColor="Red">*</asp:RequiredFieldValidator>
         <br />
         <br />
 
         Username :
         <asp:TextBox ID="username" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="username" ErrorMessage="Username is required" ForeColor="Red">*</asp:RequiredFieldValidator>
         <br />
         <br />
 
         IP Address:
         <asp:TextBox ID="ip" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="ip" ErrorMessage="IP Address is required" ForeColor="Red">*</asp:RequiredFieldValidator>
         <br />
         <br />
 
         <asp:Button ID="Button1" runat="server" Text="Add Commercial" OnClick="Button1_Click" />
+
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
+        <br />
 
     </div>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AD_PROJECTConnectionString %>" InsertCommand="AddResidentialCus" InsertCommandType="StoredProcedure" SelectCommand="AddCommercialCus" SelectCommandType="StoredProcedure">
