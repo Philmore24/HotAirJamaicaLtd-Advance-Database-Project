@@ -26,16 +26,24 @@
 
         <table cellspacing="3" class="nav-justified">
             <tr>
-                <td>
+                <td style="height: 13px">
                     <asp:Button ID="addpac" runat="server" Text="Add New Package" OnClick="addpac_Click" />
+                    <br />
                 </td>
                 <td>
                     <asp:Button ID="addtec" runat="server" Text="Add Techcian" OnClick="addtec_Click" />
+                    <br />
+                    <br />
                 </td>
             </tr>
             <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Add Installation" />
+                    <br />
+                </td>
+                <td>
+                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Add Work done" />
+                </td>
             </tr>
         </table>
 
