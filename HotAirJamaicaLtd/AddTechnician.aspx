@@ -7,29 +7,41 @@
 
         Employee ID :
         <asp:TextBox ID="empid" runat="server"></asp:TextBox>
+        &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="empid" ErrorMessage="Employee ID is required" ForeColor="Red">*</asp:RequiredFieldValidator>
         <br />
         <br />
 
         Email :
-        <asp:TextBox ID="email" runat="server"></asp:TextBox><br />
+        <asp:TextBox ID="email" runat="server"></asp:TextBox>&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="email" ErrorMessage="Email is required" ForeColor="Red">*</asp:RequiredFieldValidator>
+        <br />
         <br />
 
 
         Name : 
-        <asp:TextBox ID="name" runat="server"></asp:TextBox><br />
+        <asp:TextBox ID="name" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="name" ErrorMessage="Employee name is required" ForeColor="Red">*</asp:RequiredFieldValidator>
+        <br />
         <br />
 
 
         Address :
-        <asp:TextBox ID="address" runat="server"></asp:TextBox><br />
+        <asp:TextBox ID="address" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="address" ErrorMessage="Address is required" ForeColor="Red">*</asp:RequiredFieldValidator>
+        <br />
         <br />
 
 
         Phone Number:
-        <asp:TextBox ID="phone" runat="server"></asp:TextBox><br />
+        <asp:TextBox ID="phone" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="phone" ErrorMessage="Phone number is required" ForeColor="Red">*</asp:RequiredFieldValidator>
+        <br />
         <br />
 
         <asp:Button ID="Button1" runat="server" Text="Add Technician" OnClick="Button1_Click" />
+
+
+        <br />
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
 
 
     </div>

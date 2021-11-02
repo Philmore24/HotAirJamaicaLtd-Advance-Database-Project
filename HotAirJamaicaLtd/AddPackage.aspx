@@ -6,26 +6,38 @@
         <h2>Add Package</h2>
 
         Package ID :
-        <asp:TextBox ID="id" runat="server"></asp:TextBox><br />
+        <asp:TextBox ID="id" runat="server"></asp:TextBox>&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="id" ErrorMessage="Package ID is required" ForeColor="Red">*</asp:RequiredFieldValidator>
+        <br />
         <br />
 
         Description :
-        <asp:TextBox ID="descr" runat="server"></asp:TextBox><br />
+        <asp:TextBox ID="descr" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="descr" ErrorMessage="Package description is required" ForeColor="Red">*</asp:RequiredFieldValidator>
+        <br />
         <br />
 
         Speed :
-        <asp:TextBox ID="speed" runat="server"></asp:TextBox><br />
+        <asp:TextBox ID="speed" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="speed" ErrorMessage="Package speed is required" ForeColor="Red">*</asp:RequiredFieldValidator>
+        <br />
         <br />
 
         Monthly Charge :
-        <asp:TextBox ID="month" runat="server"></asp:TextBox><br />
+        <asp:TextBox ID="month" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="month" ErrorMessage="Monthly charge is required" ForeColor="Red">*</asp:RequiredFieldValidator>
+        <br />
         <br />
 
         Type :
-        <asp:TextBox ID="type" runat="server"></asp:TextBox><br />
+        <asp:TextBox ID="type" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="type" ErrorMessage="Package type is required" ForeColor="Red">*</asp:RequiredFieldValidator>
+        <br />
         <br />
 
         <asp:Button ID="Button1" runat="server" Text="Add Package" OnClick="Button1_Click" />
+
+
+        <br />
 
 
     </div>
@@ -45,4 +57,5 @@
             <asp:ControlParameter ControlID="type" Name="Type_Package" PropertyName="Text" Type="String" />
         </SelectParameters>
     </asp:SqlDataSource>
+    <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
 </asp:Content>
