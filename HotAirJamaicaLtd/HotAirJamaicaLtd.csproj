@@ -106,6 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AddComercial.aspx" />
+    <Content Include="AddPackage.aspx" />
+    <Content Include="AddTechnician.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -163,6 +166,27 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddComercial.aspx.cs">
+      <DependentUpon>AddComercial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddComercial.aspx.designer.cs">
+      <DependentUpon>AddComercial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddPackage.aspx.cs">
+      <DependentUpon>AddPackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddPackage.aspx.designer.cs">
+      <DependentUpon>AddPackage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddTechnician.aspx.cs">
+      <DependentUpon>AddTechnician.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddTechnician.aspx.designer.cs">
+      <DependentUpon>AddTechnician.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
