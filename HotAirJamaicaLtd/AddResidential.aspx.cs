@@ -16,7 +16,9 @@ namespace HotAirJamaicaLtd
 
 
 
-        protected void Addres_Click(object sender, EventArgs e)
+
+
+        protected void addres_Click(object sender, EventArgs e)
         {
             SqlDataSource1.Select(DataSourceSelectArguments.Empty);
             trn.Text = string.Empty;
@@ -27,8 +29,7 @@ namespace HotAirJamaicaLtd
             dob.Text = string.Empty;
             Fname.Text = string.Empty;
             Lname.Text = string.Empty;
+
         }
-
-
     }
 }
