@@ -108,7 +108,12 @@
     <Content Include="About.aspx" />
     <Content Include="AddComercial.aspx" />
     <Content Include="AddPackage.aspx" />
+    <Content Include="AddResidential.aspx" />
     <Content Include="AddTechnician.aspx" />
+    <Content Include="App_Data\HotAirJa.mdf" />
+    <Content Include="App_Data\HotAirJa_log.ldf">
+      <DependentUpon>HotAirJa.mdf</DependentUpon>
+    </Content>
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -180,6 +185,13 @@
     <Compile Include="AddPackage.aspx.designer.cs">
       <DependentUpon>AddPackage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AddResidential.aspx.cs">
+      <DependentUpon>AddResidential.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddResidential.aspx.designer.cs">
+      <DependentUpon>AddResidential.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddTechnician.aspx.cs">
       <DependentUpon>AddTechnician.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -243,9 +255,7 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
