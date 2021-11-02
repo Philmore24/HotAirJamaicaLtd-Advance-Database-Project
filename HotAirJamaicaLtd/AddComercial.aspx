@@ -6,11 +6,12 @@
         <br />
         TRN :
         <asp:TextBox ID="trn" runat="server"></asp:TextBox>
+        &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="trn" ErrorMessage="TRN is required" ForeColor="Red"></asp:RequiredFieldValidator>
         <br />
         <br />
 
         Address :
-        <asp:TextBox ID="address" runat="server"></asp:TextBox><br />
+        <asp:TextBox ID="address" runat="server"></asp:TextBox>&nbsp;<br />
         <br />
 
         Company Name :
