@@ -110,6 +110,7 @@
     <Content Include="AddPackage.aspx" />
     <Content Include="AddResidential.aspx" />
     <Content Include="AddTechnician.aspx" />
+    <Content Include="AdminPage.aspx" />
     <Content Include="App_Data\HotAirJa.mdf" />
     <Content Include="App_Data\HotAirJa_log.ldf">
       <DependentUpon>HotAirJa.mdf</DependentUpon>
@@ -198,6 +199,13 @@
     </Compile>
     <Compile Include="AddTechnician.aspx.designer.cs">
       <DependentUpon>AddTechnician.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage.aspx.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage.aspx.designer.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
