@@ -21,6 +21,15 @@
         <br />
         <br />
 
+        Phone Type: 
+        <asp:TextBox ID="phonetype" runat="server"></asp:TextBox><br />
+        <br />
+
+        Phone Number:
+        <asp:TextBox ID="phonenum" runat="server"></asp:TextBox>
+        <br />
+        <br />
+
         Mac Address :
         <asp:TextBox ID="mac" runat="server"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="mac" ErrorMessage="MAC Address is required" ForeColor="Red">*</asp:RequiredFieldValidator>
@@ -45,17 +54,16 @@
         <br />
 
     </div>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AD_PROJECTConnectionString %>" InsertCommand="AddResidentialCus" InsertCommandType="StoredProcedure" SelectCommand="AddCommercialCus" SelectCommandType="StoredProcedure">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AD_PROJECTConnectionString %>" InsertCommand="AddCommercialCus" InsertCommandType="StoredProcedure" SelectCommand="AddCommercialCus" SelectCommandType="StoredProcedure">
         <InsertParameters>
             <asp:Parameter Name="TRN" Type="String" />
+            <asp:Parameter Name="Company_name" Type="String" />
             <asp:Parameter Name="Address" Type="String" />
             <asp:Parameter Name="MAC_Address" Type="String" />
             <asp:Parameter Name="Username" Type="String" />
             <asp:Parameter Name="IP_Address" Type="String" />
-            <asp:Parameter Name="Profession" Type="String" />
-            <asp:Parameter DbType="Date" Name="DOB" />
-            <asp:Parameter Name="Lname" Type="String" />
-            <asp:Parameter Name="Fname" Type="String" />
+            <asp:Parameter Name="Phone_Type" Type="String" />
+            <asp:Parameter Name="Phone_Number" Type="String" />
         </InsertParameters>
         <SelectParameters>
             <asp:ControlParameter ControlID="trn" Name="TRN" PropertyName="Text" Type="String" />
@@ -64,6 +72,8 @@
             <asp:ControlParameter ControlID="mac" Name="MAC_Address" PropertyName="Text" Type="String" />
             <asp:ControlParameter ControlID="username" Name="Username" PropertyName="Text" Type="String" />
             <asp:ControlParameter ControlID="ip" Name="IP_Address" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="phonetype" Name="Phone_Type" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="phonenum" Name="Phone_Number" PropertyName="Text" Type="String" />
         </SelectParameters>
     </asp:SqlDataSource>
 </asp:Content>

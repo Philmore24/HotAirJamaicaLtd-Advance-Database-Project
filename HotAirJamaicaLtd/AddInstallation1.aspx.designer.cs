@@ -11,98 +11,80 @@ namespace HotAirJamaicaLtd
 {
 
 
-    public partial class AddWorkDone
+    public partial class AddInstallation1
     {
 
         /// <summary>
-        /// TRN control.
+        /// trn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TRN;
+        protected global::System.Web.UI.WebControls.TextBox trn;
 
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// acc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.TextBox acc;
 
         /// <summary>
-        /// PackageID control.
+        /// pid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PackageID;
+        protected global::System.Web.UI.WebControls.TextBox pid;
 
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// charge control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.TextBox charge;
 
         /// <summary>
-        /// AccNum control.
+        /// emp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AccNum;
+        protected global::System.Web.UI.WebControls.TextBox emp;
 
         /// <summary>
-        /// RequiredFieldValidator3 control.
+        /// dateinstall control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        protected global::System.Web.UI.WebControls.TextBox dateinstall;
 
         /// <summary>
-        /// EmployeeID control.
+        /// notes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EmployeeID;
+        protected global::System.Web.UI.WebControls.TextBox notes;
 
         /// <summary>
-        /// RequiredFieldValidator4 control.
+        /// InstallSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
-
-        /// <summary>
-        /// ValidationSummary1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
-
-        /// <summary>
-        /// submitInstall control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button submitInstall;
+        protected global::System.Web.UI.WebControls.Button InstallSubmit;
 
         /// <summary>
         /// SqlDataSource1 control.

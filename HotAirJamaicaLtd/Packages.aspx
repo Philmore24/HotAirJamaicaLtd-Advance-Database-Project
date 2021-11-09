@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Packages.aspx.cs" Inherits="HotAirJamaicaLtd.Packages" %>
+﻿<%@ Page Title="Packages" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Packages.aspx.cs" Inherits="HotAirJamaicaLtd.Packages" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -20,7 +20,7 @@
                             <div class="PacCharge"><b>Montly Charge :</b> <%#Eval("monthly_charges") %> </div>
                             <div class="PacType"><b>Type :</b><%#Eval("Type_Package") %></div>
                             <br />
-                            <asp:Button ID="PacButton"  runat="server"  Text="I'm Interested" PostBackUrl="~/Contact.aspx" CssClass="purchasebutton" />
+                            <asp:Button ID="PacButton" runat="server" Text="I'm Interested" PostBackUrl="~/Contact.aspx" CssClass="purchasebutton" />
                         </div>
 
                     </div>

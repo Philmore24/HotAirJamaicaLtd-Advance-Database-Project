@@ -25,6 +25,8 @@ namespace HotAirJamaicaLtd
             mac.Text = string.Empty;
             username.Text = string.Empty;
             ip.Text = string.Empty;
+            phonetype.Text = string.Empty;
+            phonenum.Text = string.Empty;
         }
     }
 }

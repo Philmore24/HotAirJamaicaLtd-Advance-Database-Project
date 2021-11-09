@@ -1,7 +1,10 @@
 ﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="HotAirJamaicaLtd.About" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <center><h2>About Hot Air Jamaica Ltd.</h2></center>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <center>
+        <h2>About Hot Air Jamaica Ltd.</h2>
+    </center>
     &nbsp;
     <p>
         Hot Air Jamaica Ltd. is Jamaica's number <b>1</b> internet service provides. 
