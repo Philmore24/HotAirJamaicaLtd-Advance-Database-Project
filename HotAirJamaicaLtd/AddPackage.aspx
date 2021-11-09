@@ -38,24 +38,24 @@
 
 
         <br />
+        <br />
+
+    <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
+
+
+        <br />
 
 
     </div>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AD_PROJECTConnectionString %>" InsertCommand="AddPackage" InsertCommandType="StoredProcedure" SelectCommand="AddPackage" SelectCommandType="StoredProcedure">
-        <InsertParameters>
-            <asp:Parameter Name="Package_ID" Type="String" />
-            <asp:Parameter Name="Description" Type="String" />
-            <asp:Parameter Name="Speed" Type="String" />
-            <asp:Parameter Name="monthly_charges" Type="Decimal" />
-            <asp:Parameter Name="Type_Package" Type="String" />
-        </InsertParameters>
-        <SelectParameters>
-            <asp:ControlParameter ControlID="id" Name="Package_ID" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="descr" Name="Description" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="speed" Name="Speed" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="month" Name="monthly_charges" PropertyName="Text" Type="Decimal" />
-            <asp:ControlParameter ControlID="type" Name="Type_Package" PropertyName="Text" Type="String" />
-        </SelectParameters>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AD_PROJECTConnectionString %>" SelectCommand="SELECT * FROM [Package Information]">
     </asp:SqlDataSource>
-    <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Package_ID" DataSourceID="SqlDataSource1">
+        <Columns>
+            <asp:BoundField DataField="Package_ID" HeaderText="Package_ID" ReadOnly="True" SortExpression="Package_ID" />
+            <asp:BoundField DataField="Speed" HeaderText="Speed" SortExpression="Speed" />
+            <asp:BoundField DataField="monthly_charges" HeaderText="monthly_charges" SortExpression="monthly_charges" />
+            <asp:BoundField DataField="Type_Package" HeaderText="Type_Package" SortExpression="Type_Package" />
+            <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
+        </Columns>
+    </asp:GridView>
 </asp:Content>

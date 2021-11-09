@@ -41,25 +41,25 @@
 
 
         <br />
+        <br />
+
+
+        <br />
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
 
 
     </div>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AD_PROJECTConnectionString %>" InsertCommand="AddTechnician" InsertCommandType="StoredProcedure" SelectCommand="AddTechnician" SelectCommandType="StoredProcedure">
-        <InsertParameters>
-            <asp:Parameter Name="Emp_ID" Type="String" />
-            <asp:Parameter Name="Email" Type="String" />
-            <asp:Parameter Name="Name" Type="String" />
-            <asp:Parameter Name="Address" Type="String" />
-            <asp:Parameter Name="Phone_number" Type="String" />
-        </InsertParameters>
-        <SelectParameters>
-            <asp:ControlParameter ControlID="empid" Name="Emp_ID" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="email" Name="Email" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="name" Name="Name" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="address" Name="Address" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="phone" Name="Phone_number" PropertyName="Text" Type="String" />
-        </SelectParameters>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AD_PROJECTConnectionString %>" SelectCommand="SELECT * FROM [View Technician]">
     </asp:SqlDataSource>
-
+<div>
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Emp_ID" DataSourceID="SqlDataSource1">
+        <Columns>
+            <asp:BoundField DataField="Emp_ID" HeaderText="Emp_ID" ReadOnly="True" SortExpression="Emp_ID" />
+            <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+            <asp:BoundField DataField="Phone_number" HeaderText="Phone_number" SortExpression="Phone_number" />
+            <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+            <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
+        </Columns>
+    </asp:GridView>
+</div>
 </asp:Content>

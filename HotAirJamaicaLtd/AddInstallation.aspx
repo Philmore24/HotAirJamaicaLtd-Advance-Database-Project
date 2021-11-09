@@ -46,26 +46,22 @@
     <asp:Button ID="Addinstall" runat="server" Text="Submit" OnClick="Addinstall_Click" />
     <br />
     <br />
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AD_PROJECTConnectionString %>" InsertCommand="AddInstallation" InsertCommandType="StoredProcedure" SelectCommand="AddInstallation" SelectCommandType="StoredProcedure">
-        <InsertParameters>
-            <asp:Parameter Name="Installation_Charge" Type="Int32" />
-            <asp:Parameter DbType="Date" Name="Date_Install" />
-            <asp:Parameter Name="Notes" Type="String" />
-            <asp:Parameter Name="Package_Id" Type="String" />
-            <asp:Parameter Name="TRN" Type="String" />
-            <asp:Parameter Name="Acc_Num" Type="String" />
-            <asp:Parameter Name="emp_id" Type="String" />
-        </InsertParameters>
-        <SelectParameters>
-            <asp:ControlParameter ControlID="bill" Name="Installation_Charge" PropertyName="Text" Type="Int32" />
-            <asp:ControlParameter ControlID="date" DbType="Date" Name="Date_Install" PropertyName="Text" />
-            <asp:ControlParameter ControlID="notes" Name="Notes" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="PackageID" Name="Package_Id" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="TRN" Name="TRN" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="AccNum" Name="Acc_Num" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="emp" Name="emp_id" PropertyName="Text" Type="String" />
-        </SelectParameters>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AD_PROJECTConnectionString %>" SelectCommand="SELECT * FROM [View Installations_Emp]">
     </asp:SqlDataSource>
+
+    <br />
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Account_Number" DataSourceID="SqlDataSource1">
+        <Columns>
+            <asp:BoundField DataField="TRN" HeaderText="TRN" SortExpression="TRN" />
+            <asp:BoundField DataField="Account_Number" HeaderText="Account_Number" ReadOnly="True" SortExpression="Account_Number" />
+            <asp:BoundField DataField="Package_Id" HeaderText="Package_Id" SortExpression="Package_Id" />
+            <asp:BoundField DataField="Type_Package" HeaderText="Type_Package" SortExpression="Type_Package" />
+            <asp:BoundField DataField="Installation_Charge" HeaderText="Installation_Charge" SortExpression="Installation_Charge" />
+            <asp:BoundField DataField="Date_Install" HeaderText="Date_Install" SortExpression="Date_Install" />
+            <asp:BoundField DataField="Technician Name" HeaderText="Technician Name" SortExpression="Technician Name" />
+            <asp:BoundField DataField="Notes" HeaderText="Notes" SortExpression="Notes" />
+        </Columns>
+    </asp:GridView>
 
     <br />
 </asp:Content>

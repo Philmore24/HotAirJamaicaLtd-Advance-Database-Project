@@ -54,26 +54,20 @@
         <br />
 
     </div>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AD_PROJECTConnectionString %>" InsertCommand="AddCommercialCus" InsertCommandType="StoredProcedure" SelectCommand="AddCommercialCus" SelectCommandType="StoredProcedure">
-        <InsertParameters>
-            <asp:Parameter Name="TRN" Type="String" />
-            <asp:Parameter Name="Company_name" Type="String" />
-            <asp:Parameter Name="Address" Type="String" />
-            <asp:Parameter Name="MAC_Address" Type="String" />
-            <asp:Parameter Name="Username" Type="String" />
-            <asp:Parameter Name="IP_Address" Type="String" />
-            <asp:Parameter Name="Phone_Type" Type="String" />
-            <asp:Parameter Name="Phone_Number" Type="String" />
-        </InsertParameters>
-        <SelectParameters>
-            <asp:ControlParameter ControlID="trn" Name="TRN" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="company" Name="Company_name" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="address" Name="Address" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="mac" Name="MAC_Address" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="username" Name="Username" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="ip" Name="IP_Address" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="phonetype" Name="Phone_Type" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="phonenum" Name="Phone_Number" PropertyName="Text" Type="String" />
-        </SelectParameters>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AD_PROJECTConnectionString %>" SelectCommand="SELECT * FROM [Commercial Customers]">
     </asp:SqlDataSource>
+    <div>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+            <Columns>
+                <asp:BoundField DataField="Company_name" HeaderText="Company_name" SortExpression="Company_name" />
+                <asp:BoundField DataField="TRN" HeaderText="TRN" SortExpression="TRN" />
+                <asp:BoundField DataField="Phone_Number" HeaderText="Phone_Number" SortExpression="Phone_Number" />
+                <asp:BoundField DataField="Phone_Type" HeaderText="Phone_Type" SortExpression="Phone_Type" />
+                <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
+                <asp:BoundField DataField="Username" HeaderText="Username" SortExpression="Username" />
+                <asp:BoundField DataField="MAC_Address" HeaderText="MAC_Address" SortExpression="MAC_Address" />
+                <asp:BoundField DataField="IP_Address" HeaderText="IP_Address" SortExpression="IP_Address" />
+            </Columns>
+        </asp:GridView>
+    </div>
 </asp:Content>

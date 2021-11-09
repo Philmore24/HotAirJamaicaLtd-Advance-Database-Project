@@ -71,36 +71,25 @@
 
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
 
-        <asp:Button ID="Addres" runat="server" Text="Add Residential Customer" OnClick="addres_Click" />
+        <asp:Button ID="Addres" runat="server" Text="Add Residential Customer" OnClick="Addres_Click" />
+        <br />
         <br />
     </div>
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+        <Columns>
+            <asp:BoundField DataField="Fname" HeaderText="Fname" SortExpression="Fname" />
+            <asp:BoundField DataField="Lname" HeaderText="Lname" SortExpression="Lname" />
+            <asp:BoundField DataField="TRN" HeaderText="TRN" SortExpression="TRN" />
+            <asp:BoundField DataField="Phone_Number" HeaderText="Phone_Number" SortExpression="Phone_Number" />
+            <asp:BoundField DataField="Phone_Type" HeaderText="Phone_Type" SortExpression="Phone_Type" />
+            <asp:BoundField DataField="DOB" HeaderText="DOB" SortExpression="DOB" />
+            <asp:BoundField DataField="Profession" HeaderText="Profession" SortExpression="Profession" />
+            <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
+            <asp:BoundField DataField="Username" HeaderText="Username" SortExpression="Username" />
+            <asp:BoundField DataField="MAC_Address" HeaderText="MAC_Address" SortExpression="MAC_Address" />
+            <asp:BoundField DataField="IP_Address" HeaderText="IP_Address" SortExpression="IP_Address" />
+        </Columns>
+    </asp:GridView>
     <br />
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AD_PROJECTConnectionString %>" InsertCommand="AddResidentialCus" InsertCommandType="StoredProcedure" SelectCommand="AddResidentialCus" SelectCommandType="StoredProcedure">
-        <InsertParameters>
-            <asp:Parameter Name="TRN" Type="String" />
-            <asp:Parameter Name="Address" Type="String" />
-            <asp:Parameter Name="MAC_Address" Type="String" />
-            <asp:Parameter Name="Username" Type="String" />
-            <asp:Parameter Name="IP_Address" Type="String" />
-            <asp:Parameter Name="Profession" Type="String" />
-            <asp:Parameter DbType="Date" Name="DOB" />
-            <asp:Parameter Name="Lname" Type="String" />
-            <asp:Parameter Name="Fname" Type="String" />
-            <asp:Parameter Name="Phone_Type" Type="String" />
-            <asp:Parameter Name="Phone_Number" Type="String" />
-        </InsertParameters>
-        <SelectParameters>
-            <asp:ControlParameter ControlID="trn" Name="TRN" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="Address" Name="Address" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="Mac" Name="MAC_Address" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="Username" Name="Username" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="IP" Name="IP_Address" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="Prof" Name="Profession" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="dob" DbType="Date" Name="DOB" PropertyName="Text" />
-            <asp:ControlParameter ControlID="Fname" Name="Lname" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="Fname" Name="Fname" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="phonetype" Name="Phone_Type" PropertyName="Text" Type="String" />
-            <asp:ControlParameter ControlID="phonenum" Name="Phone_Number" PropertyName="Text" Type="String" />
-        </SelectParameters>
-    </asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AD_PROJECTConnectionString %>" SelectCommand="SELECT * FROM [Residential Customers]"></asp:SqlDataSource>
 </asp:Content>
