@@ -7,16 +7,18 @@ using System.Web.UI.WebControls;
 
 namespace HotAirJamaicaLtd
 {
-    public partial class _Default : Page
+    public partial class AddWorkDone : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+
+
+        protected void submitInstall_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Packages.aspx");
+
         }
     }
 }

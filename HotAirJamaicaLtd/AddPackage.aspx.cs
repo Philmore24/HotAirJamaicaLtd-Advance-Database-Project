@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace HotAirJamaicaLtd
 {
-    public partial class _Default : Page
+    public partial class AddPackage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -16,7 +16,13 @@ namespace HotAirJamaicaLtd
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Packages.aspx");
+            SqlDataSource1.Select(DataSourceSelectArguments.Empty);
+
+            id.Text = string.Empty;
+            descr.Text = string.Empty;
+            speed.Text = string.Empty;
+            month.Text = string.Empty;
+            type.Text = string.Empty;
         }
     }
 }
