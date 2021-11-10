@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddComercial.aspx.cs" Inherits="HotAirJamaicaLtd.AddComercial" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <link href="CSS/Products.css" rel="stylesheet" />
     <div>
         <h2>Add Commercial Customer</h2>
         <br />
@@ -48,16 +49,38 @@
         <br />
         <br />
 
-        <asp:Button ID="Button1" runat="server" Text="Add Commercial" OnClick="Button1_Click" />
+        <asp:Button ID="Button1" runat="server" Text="Add Commercial" OnClick="Button1_Click" CssClass="purchasebutton" />
 
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
         <br />
 
     </div>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AD_PROJECTConnectionString %>" SelectCommand="SELECT * FROM [Commercial Customers]">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AD_PROJECTConnectionString %>" SelectCommand="AddCommercialCus" InsertCommand="AddCommercialCus" InsertCommandType="StoredProcedure" SelectCommandType="StoredProcedure">
+        <InsertParameters>
+            <asp:Parameter Name="TRN" Type="String" />
+            <asp:Parameter Name="Company_name" Type="String" />
+            <asp:Parameter Name="Address" Type="String" />
+            <asp:Parameter Name="MAC_Address" Type="String" />
+            <asp:Parameter Name="Username" Type="String" />
+            <asp:Parameter Name="IP_Address" Type="String" />
+            <asp:Parameter Name="Phone_Type" Type="String" />
+            <asp:Parameter Name="Phone_Number" Type="String" />
+        </InsertParameters>
+        <SelectParameters>
+            <asp:ControlParameter ControlID="trn" Name="TRN" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="company" Name="Company_name" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="address" Name="Address" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="mac" Name="MAC_Address" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="username" Name="Username" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="username" Name="IP_Address" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="phonetype" Name="Phone_Type" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="phonenum" Name="Phone_Number" PropertyName="Text" Type="String" />
+        </SelectParameters>
     </asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:AD_PROJECTConnectionString %>" SelectCommand="SELECT * FROM [Commercial Customers]"></asp:SqlDataSource>
+    <br />
     <div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" Height="147px" Width="959px">
             <Columns>
                 <asp:BoundField DataField="Company_name" HeaderText="Company_name" SortExpression="Company_name" />
                 <asp:BoundField DataField="TRN" HeaderText="TRN" SortExpression="TRN" />
@@ -68,6 +91,7 @@
                 <asp:BoundField DataField="MAC_Address" HeaderText="MAC_Address" SortExpression="MAC_Address" />
                 <asp:BoundField DataField="IP_Address" HeaderText="IP_Address" SortExpression="IP_Address" />
             </Columns>
+            <HeaderStyle BackColor="#6699FF" />
         </asp:GridView>
     </div>
 </asp:Content>

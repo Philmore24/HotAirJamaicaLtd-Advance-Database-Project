@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddWorkDone.aspx.cs" Inherits="HotAirJamaicaLtd.AddWorkDone" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <link href="CSS/Products.css" rel="stylesheet" />
     <h1 align="center">Add Installations Carried Out</h1>
     TRN:&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:TextBox ID="TRN" runat="server"></asp:TextBox>
@@ -23,7 +24,7 @@
     <br />
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
     <br />
-    <asp:Button ID="submitInstall" runat="server" Text="Submit" OnClick="submitInstall_Click" />
+    <asp:Button ID="submitInstall" runat="server" Text="Submit" OnClick="submitInstall_Click" CssClass="purchasebutton" />
 
     <br />
     <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>

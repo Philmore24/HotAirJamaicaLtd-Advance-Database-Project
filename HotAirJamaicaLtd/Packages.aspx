@@ -14,7 +14,7 @@
                         <img src="Images/internet.png" />
 
                         <div class="caption">
-                            <div class="PacName"><b>Packae ID :</b> <%#Eval("Package_ID") %> </div>
+                            <div class="PacName"><b>Package ID :</b> <%#Eval("Package_ID") %> </div>
                             <div class="PacDesc"><b>Description:</b> <%#Eval("Description") %> </div>
                             <div class="PacSpeed"><b>Speed :</b><%#Eval("Speed") %></div>
                             <div class="PacCharge"><b>Montly Charge :</b> <%#Eval("monthly_charges") %> </div>

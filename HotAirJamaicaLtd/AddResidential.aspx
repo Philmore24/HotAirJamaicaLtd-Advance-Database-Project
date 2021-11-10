@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddResidential.aspx.cs" Inherits="HotAirJamaicaLtd.AddResidential" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <link href="CSS/Products.css" rel="stylesheet" />
 
     <div>
         <h1 align="center">Add residential customer</h1>
@@ -71,11 +72,11 @@
 
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" />
 
-        <asp:Button ID="Addres" runat="server" Text="Add Residential Customer" OnClick="Addres_Click" />
+        <asp:Button ID="Addres" runat="server" Text="Add Residential Customer" OnClick="Addres_Click" CssClass="purchasebutton" />
         <br />
         <br />
     </div>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" Height="127px" Width="1227px">
         <Columns>
             <asp:BoundField DataField="Fname" HeaderText="Fname" SortExpression="Fname" />
             <asp:BoundField DataField="Lname" HeaderText="Lname" SortExpression="Lname" />
@@ -89,7 +90,36 @@
             <asp:BoundField DataField="MAC_Address" HeaderText="MAC_Address" SortExpression="MAC_Address" />
             <asp:BoundField DataField="IP_Address" HeaderText="IP_Address" SortExpression="IP_Address" />
         </Columns>
+        <HeaderStyle BackColor="#66CCFF" HorizontalAlign="Center" />
     </asp:GridView>
     <br />
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AD_PROJECTConnectionString %>" SelectCommand="SELECT * FROM [Residential Customers]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AD_PROJECTConnectionString %>" SelectCommand="AddResidentialCus" InsertCommand="AddResidentialCus" InsertCommandType="StoredProcedure" SelectCommandType="StoredProcedure">
+        <InsertParameters>
+            <asp:Parameter Name="TRN" Type="String" />
+            <asp:Parameter Name="Address" Type="String" />
+            <asp:Parameter Name="MAC_Address" Type="String" />
+            <asp:Parameter Name="Username" Type="String" />
+            <asp:Parameter Name="IP_Address" Type="String" />
+            <asp:Parameter Name="Profession" Type="String" />
+            <asp:Parameter DbType="Date" Name="DOB" />
+            <asp:Parameter Name="Lname" Type="String" />
+            <asp:Parameter Name="Fname" Type="String" />
+            <asp:Parameter Name="Phone_Type" Type="String" />
+            <asp:Parameter Name="Phone_Number" Type="String" />
+        </InsertParameters>
+        <SelectParameters>
+            <asp:ControlParameter ControlID="trn" Name="TRN" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="Address" Name="Address" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="Mac" Name="MAC_Address" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="Username" Name="Username" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="IP" Name="IP_Address" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="Prof" Name="Profession" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="dob" DbType="Date" Name="DOB" PropertyName="Text" />
+            <asp:ControlParameter ControlID="Lname" Name="Lname" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="Fname" Name="Fname" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="phonetype" Name="Phone_Type" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="phonenum" Name="Phone_Number" PropertyName="Text" Type="String" />
+        </SelectParameters>
+    </asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:AD_PROJECTConnectionString %>" SelectCommand="SELECT * FROM [Residential Customers]"></asp:SqlDataSource>
 </asp:Content>

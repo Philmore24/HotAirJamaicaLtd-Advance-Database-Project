@@ -107,6 +107,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AddComercial.aspx" />
+    <Content Include="AddCommercialPhil.aspx" />
     <Content Include="AddInstallation.aspx" />
     <Content Include="AddInstallation1.aspx" />
     <Content Include="AddPackage.aspx" />
@@ -182,6 +183,13 @@
     </Compile>
     <Compile Include="AddComercial.aspx.designer.cs">
       <DependentUpon>AddComercial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddCommercialPhil.aspx.cs">
+      <DependentUpon>AddCommercialPhil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddCommercialPhil.aspx.designer.cs">
+      <DependentUpon>AddCommercialPhil.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddInstallation.aspx.cs">
       <DependentUpon>AddInstallation.aspx</DependentUpon>

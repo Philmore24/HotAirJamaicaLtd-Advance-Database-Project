@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="HotAirJamaicaLtd.Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <link href="CSS/Products.css" rel="stylesheet" />
     <br />
     <div>
         <h2>Register Account</h2>
@@ -24,7 +25,7 @@
         <br />
 
 
-        <asp:Button ID="RegAcc" runat="server" Text="Register" OnClick="RegAcc_Click" />
+        <asp:Button ID="RegAcc" runat="server" Text="Register" OnClick="RegAcc_Click" CssClass="purchasebutton" />
         <br />
 
     </div>
